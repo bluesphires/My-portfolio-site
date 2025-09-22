@@ -51,7 +51,7 @@ const Sidebar = () => {
         <div className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-3">
           <div className="flex items-center justify-between">
             <span className="text-blue-300 text-sm font-medium">Available now</span>
-            <div className="w-3 h-3 bg-accent rounded-full"></div>
+            <div className="w-3 h-3 rounded-full" style={{backgroundColor: '#61d161'}}></div>
           </div>
         </div>
       </div>
@@ -59,17 +59,20 @@ const Sidebar = () => {
       {/* Border after promotional section */}
       <div className="w-full h-px bg-border"></div>
 
-      {/* Education Section */}
-      <div className="p-6">
-        <h3 className="text-base font-medium text-foreground mb-3">Education</h3>
-        <div className="space-y-2">
-          <div>
-            <div className="text-foreground text-base font-medium">Virtual University Of Pakistan</div>
-            <div className="text-text-muted text-sm">Computer science</div>
-            <div className="text-text-muted text-sm">2024-2028 (expected)</div>
-          </div>
-        </div>
-      </div>
+            {/* Education Section */}
+            <div className="p-6">
+              <h3 className="text-base font-medium text-foreground mb-3">Education</h3>
+              <div className="space-y-2">
+                <div>
+                  <div className="text-foreground text-base font-medium">Virtual University Of Pakistan</div>
+                  <div className="text-text-muted text-sm">Computer science</div>
+                  <div className="text-text-muted text-sm">2024-2028 (expected)</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Border after Education section */}
+            <div className="w-full h-px bg-border"></div>
 
       {/* Connects */}
       <div className="p-6">

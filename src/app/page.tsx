@@ -44,7 +44,7 @@ export default function Home() {
                       />
                     </div>
                     {/* Online Status Indicator */}
-                    <div className="absolute top-1 left-1 w-4 h-4 bg-accent rounded-full border-2 border-background"></div>
+                    <div className="absolute top-1 left-1 w-4 h-4 rounded-full border-2" style={{backgroundColor: '#61d161', borderColor: '#2d2d2d'}}></div>
               </div>
               
               {/* Name and Details */}
@@ -89,12 +89,12 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Right Side - Book Consultation Button */}
-            <div className="flex flex-col items-end space-y-3">
-              <button className="bg-accent text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-[#177803] transition-colors cursor-pointer">
-                Book a consultation
-              </button>
-            </div>
+                  {/* Right Side - Download CV Button */}
+                  <div className="flex flex-col items-end space-y-3">
+                    <button className="bg-accent text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-[#177803] hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer">
+                      Download CV
+                    </button>
+                  </div>
           </div>
         </div>
         
