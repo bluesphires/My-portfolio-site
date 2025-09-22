@@ -30,7 +30,7 @@ const Sidebar = () => {
         </div>
         
         <div className="space-y-2">
-          <button className="w-full bg-accent text-white py-2 px-4 rounded text-sm font-medium hover:bg-green-600 transition-colors">
+          <button className="w-full bg-accent text-white py-2 px-4 rounded text-sm font-medium hover:bg-[#177803] transition-colors">
             See public view
           </button>
           <button className="w-full border border-border text-foreground py-2 px-4 rounded text-sm font-medium hover:bg-secondary transition-colors">

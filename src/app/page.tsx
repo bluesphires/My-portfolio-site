@@ -89,6 +89,12 @@ export default function Home() {
               </div>
             </div>
             
+            {/* Right Side - Book Consultation Button */}
+            <div className="flex flex-col items-end space-y-3">
+              <button className="bg-accent text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-[#177803] transition-colors cursor-pointer">
+                Book a consultation
+              </button>
+            </div>
           </div>
         </div>
         

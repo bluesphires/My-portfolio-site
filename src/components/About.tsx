@@ -32,8 +32,8 @@ const About = () => {
                   <div className="text-2xl font-bold text-blue-600">50+</div>
                   <div className="text-gray-600">Projects</div>
                 </div>
-                <div className="bg-green-50 p-4 rounded-lg">
-                  <div className="text-2xl font-bold text-green-600">3+</div>
+                <div className="bg-[#177803]/10 p-4 rounded-lg">
+                  <div className="text-2xl font-bold text-[#177803]">3+</div>
                   <div className="text-gray-600">Years Experience</div>
                 </div>
               </div>
