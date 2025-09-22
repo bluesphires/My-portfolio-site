@@ -54,21 +54,19 @@ const Sidebar = () => {
             <div className="w-3 h-3 bg-accent rounded-full"></div>
           </div>
         </div>
-        
-        <div className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-3">
-          <div className="flex items-center justify-between">
-            <div>
-              <div className="text-blue-300 text-sm font-medium">Availability badge</div>
-              <div className="text-blue-200 text-xs">Off</div>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-4 bg-gray-600 rounded-full relative">
-                <div className="w-3 h-3 bg-gray-400 rounded-full absolute top-0.5 left-0.5"></div>
-              </div>
-              <svg className="w-4 h-4 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-              </svg>
-            </div>
+      </div>
+
+      {/* Border after promotional section */}
+      <div className="w-full h-px bg-border"></div>
+
+      {/* Education Section */}
+      <div className="p-6">
+        <h3 className="text-base font-medium text-foreground mb-3">Education</h3>
+        <div className="space-y-2">
+          <div>
+            <div className="text-foreground text-base font-medium">Virtual University Of Pakistan</div>
+            <div className="text-text-muted text-sm">Computer science</div>
+            <div className="text-text-muted text-sm">2024-2028 (expected)</div>
           </div>
         </div>
       </div>
