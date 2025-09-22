@@ -98,6 +98,9 @@ export default function Home() {
           </div>
         </div>
         
+        {/* Border below profile header */}
+        <div className="w-full h-px bg-border"></div>
+        
         <div className="flex">
           <Sidebar />
           <MainContent />
