@@ -9,55 +9,25 @@ const Sidebar = () => {
 
   return (
     <aside className="w-80 bg-background border-r border-border min-h-screen p-6">
-      {/* Profile Section */}
-      <div className="mb-8">
-            <div className="flex items-center space-x-4 mb-4">
-              <div className="w-16 h-16 rounded-full overflow-hidden">
-                <img 
-                  src="/profile.png" 
-                  alt="Profile" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-          <div>
-            <h2 className="text-xl font-bold text-foreground">Hasnain B.</h2>
-            <p className="text-text-muted text-sm">Gilgit, Pakistan - 3:21 am local time</p>
-            <div className="flex items-center space-x-1 mt-1">
-              <div className="w-2 h-2 bg-accent rounded-full"></div>
-              <span className="text-accent text-sm font-medium">67% Job Success</span>
-            </div>
-          </div>
-        </div>
-        
-        <div className="space-y-2">
-          <button className="w-full bg-accent text-white py-2 px-4 rounded text-sm font-medium hover:bg-[#177803] transition-colors">
-            See public view
-          </button>
-          <button className="w-full border border-border text-foreground py-2 px-4 rounded text-sm font-medium hover:bg-secondary transition-colors">
-            Profile settings
-          </button>
-        </div>
-      </div>
-
       {/* Navigation */}
       <div className="mb-8">
         <div className="space-y-1">
-          <div className="flex items-center space-x-2 text-accent py-2">
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-            </svg>
-            <span className="text-sm font-medium">View profile</span>
+          <div className="text-foreground py-2 cursor-pointer hover:bg-secondary rounded transition-colors">
+            <span className="text-base font-medium">View profile</span>
           </div>
-          <div className="text-text-muted py-1 pl-6 text-sm">Front-End Development</div>
-          <div className="text-text-muted py-1 pl-6 text-sm">DevOps Engineering</div>
-          <button className="flex items-center space-x-2 text-text-muted py-2 hover:text-foreground transition-colors">
-            <span className="text-sm">All work</span>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="text-text-muted py-2 pl-6 text-base cursor-pointer hover:bg-secondary rounded transition-colors">Front-End Development</div>
+          <div className="text-text-muted py-2 pl-6 text-base cursor-pointer hover:bg-secondary rounded transition-colors">DevOps Engineering</div>
+          <div className="flex items-center justify-between w-full bg-secondary text-foreground py-2 rounded hover:bg-secondary/80 transition-colors cursor-pointer">
+            <span className="text-base pl-6">All work</span>
+            <svg className="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </button>
+          </div>
         </div>
       </div>
+
+      {/* Border after navigation */}
+      <div className="w-full h-px bg-border mb-8"></div>
 
       {/* Earnings Summary */}
       <div className="mb-8">
