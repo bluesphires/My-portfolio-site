@@ -91,72 +91,86 @@ const MainContent = ({ activeSection }: MainContentProps) => {
               
               <div className="mb-6">
                 <div className="text-foreground text-base">Experienced Fullstack and DevOps Engineer Ready to Build and Deploy</div>
-                <div className="text-foreground text-base">🕒 Available 40+ Hrs./Week</div>
-                <div className="text-foreground text-base">⏱️ Committed to Deadlines & Milestones</div>
+                <div className="text-foreground text-base">Available 40+ Hrs./Week</div>
+                <div className="text-foreground text-base">Committed to Deadlines & Milestones</div>
               </div>
               
-              <div>
-                {!showFullDescription ? (
-                  <>
-                    <p className="text-foreground text-base leading-relaxed">
-                      Hello! I'm Hasnain, a Full Stack Developer & DevOps Engineer with 6+ years of experience building modern web applications and managing cloud infrastructure. I specialize in delivering complete solutions from clean...
-                    </p>
-                    <button 
-                      className="text-accent underline cursor-pointer"
-                      onClick={() => setShowFullDescription(true)}
-                    >
-                      more
-                    </button>
-                  </>
-                ) : (
-                  <div className="text-foreground text-base leading-relaxed space-y-4">
-                    <p>
-                      Hello! I'm Hasnain, a Full Stack Developer & DevOps Engineer with 6+ years of experience building modern web applications and managing cloud infrastructure. I specialize in delivering complete solutions from clean and responsive front-ends to powerful back-ends and automated deployments.
-                    </p>
-                    
-                    <div>
-                      <p className="font-semibold mb-2">What I Do:</p>
-                      <div className="space-y-1">
-                        <div>✅ Build web apps with React.js, Next.js, and TypeScript</div>
-                        <div>✅ Create backends & APIs with Node.js, Express, MongoDB</div>
-                        <div>✅ Design responsive UI with TailwindCSS & modern frameworks</div>
-                        <div>✅ Deploy and scale apps using AWS, Google Cloud, Vercel</div>
-                        <div>✅ Set up CI/CD pipelines, Docker, GitHub Actions for smooth workflows</div>
-                        <div>✅ Work with databases: MongoDB, PostgreSQL, MySQL, Firebase, Supabase</div>
+              <div className="overflow-hidden">
+                <div 
+                  className={`transition-all duration-500 ease-in-out ${
+                    showFullDescription 
+                      ? 'max-h-[1500px]' 
+                      : 'max-h-24'
+                  }`}
+                >
+                  <div className={`transition-all duration-500 ease-in-out ${
+                    showFullDescription 
+                      ? 'opacity-100 translate-y-0' 
+                      : 'opacity-100 translate-y-0'
+                  }`}>
+                    {!showFullDescription ? (
+                      <div>
+                         <p className="text-foreground text-base leading-relaxed">
+                           Hello! I'm Hasnain, a Full Stack Developer & DevOps Engineer with 6+ years of experience building modern web applications and managing cloud infrastructure. I specialize in delivering complete solutions from clean and responsive front-ends to...
+                         </p>
+                        <button 
+                          className="text-accent underline cursor-pointer transition-colors duration-200 hover:text-accent/80"
+                          onClick={() => setShowFullDescription(true)}
+                        >
+                          more
+                        </button>
                       </div>
-                    </div>
-                    
-                    <div>
-                      <p className="font-semibold mb-2">Why Clients Hire Me:</p>
-                      <div className="space-y-1">
-                        <div>✅ End-to-end development (frontend + backend + deployment)</div>
-                        <div>✅ Reliable, deadline-focused, and detail-oriented</div>
-                        <div>✅ Strong communication—clear and simple updates</div>
-                        <div>✅ Scalable and secure solutions for businesses</div>
+                    ) : (
+                      <div className="text-foreground text-base leading-relaxed space-y-4">
+                        <p>
+                          Hello! I'm Hasnain, a Full Stack Developer & DevOps Engineer with 6+ years of experience building modern web applications and managing cloud infrastructure. I specialize in delivering complete solutions from clean and responsive front-ends to powerful back-ends and automated deployments.
+                        </p>
+                        
+                        <div>
+                          <p className="font-semibold mb-2">What I Do:</p>
+                          <div className="space-y-1">
+                            <div>✅ Build web apps with React.js, Next.js, and TypeScript</div>
+                            <div>✅ Create backends & APIs with Node.js, Express, MongoDB</div>
+                            <div>✅ Design responsive UI with TailwindCSS & modern frameworks</div>
+                            <div>✅ Deploy and scale apps using AWS, Google Cloud, Vercel</div>
+                            <div>✅ Set up CI/CD pipelines, Docker, GitHub Actions for smooth workflows</div>
+                            <div>✅ Work with databases: MongoDB, PostgreSQL, MySQL, Firebase, Supabase</div>
+                          </div>
+                        </div>
+                        
+                        <div>
+                          <p className="font-semibold mb-2">Why Clients Hire Me:</p>
+                          <div className="space-y-1">
+                            <div>✅ End-to-end development (frontend + backend + deployment)</div>
+                            <div>✅ Reliable, deadline-focused, and detail-oriented</div>
+                            <div>✅ Strong communication—clear and simple updates</div>
+                            <div>✅ Scalable and secure solutions for businesses</div>
+                          </div>
+                        </div>
+                        
+                        <p>
+                          Whether you need a landing page, a full SaaS app, or DevOps automation for cloud hosting, I can help bring your ideas to life.
+                        </p>
+                        
+                        <p>
+                          Let's build something amazing!
+                        </p>
+                        
+                        <p>
+                          Best,<br />
+                          Hasnain
+                        </p>
+                        
+                        <button 
+                          className="text-accent underline cursor-pointer transition-colors duration-200 hover:text-accent/80"
+                          onClick={() => setShowFullDescription(false)}
+                        >
+                          less
+                        </button>
                       </div>
-                    </div>
-                    
-                    <p>
-                      Whether you need a landing page, a full SaaS app, or DevOps automation for cloud hosting, I can help bring your ideas to life.
-                    </p>
-                    
-                    <p>
-                      Let's build something amazing!
-                    </p>
-                    
-                    <p>
-                      Best,<br />
-                      Hasnain
-                    </p>
-                    
-                    <button 
-                      className="text-accent underline cursor-pointer"
-                      onClick={() => setShowFullDescription(false)}
-                    >
-                      less
-                    </button>
+                    )}
                   </div>
-                )}
+                </div>
               </div>
             </div>
             
