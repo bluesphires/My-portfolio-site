@@ -93,6 +93,34 @@ export default function Home() {
           <Sidebar activeSection={activeSection} onSectionChange={setActiveSection} />
           <MainContent activeSection={activeSection} />
         </div>
+        
+        {/* Border at bottom of sidebar/main content section */}
+        <div className="w-full h-px bg-border"></div>
+      </div>
+
+      {/* Employment History Section - Separate Container */}
+      <div className="max-w-7xl mx-auto border border-border mt-8 mb-8">
+        <div className="p-8">
+          <h2 className="text-2xl font-bold text-foreground mb-6">Employment history</h2>
+          
+          {/* First Job Entry */}
+          <div className="mb-6">
+            <h3 className="text-xl font-bold text-foreground mb-2">Front-end Developer | Cloudlem</h3>
+            <p className="text-text-muted text-sm mb-3">September 2023 - November 2024</p>
+            <p className="text-foreground text-sm leading-relaxed">
+              Embark on an enriching journey into the dynamic world of front-end development with Cloudlem comprehensive guide crafted to equip you with the latest skills and knowledge prevalent in 2023 and beyond.
+            </p>
+          </div>
+
+          {/* Separator */}
+          <div className="w-full h-px bg-border mb-6"></div>
+
+          {/* Second Job Entry */}
+          <div>
+            <h3 className="text-xl font-bold text-foreground mb-2">Front-end web developer | DotAustere</h3>
+            <p className="text-text-muted text-sm">September 2021 - January 2022</p>
+          </div>
+        </div>
       </div>
     </div>
   );

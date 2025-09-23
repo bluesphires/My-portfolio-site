@@ -85,10 +85,9 @@ const MainContent = ({ activeSection }: MainContentProps) => {
           <div>
             {/* Profile Header */}
             <div className="pt-8 px-8 pb-8">
-              <div className="flex items-center justify-between mb-6">
-                <h1 className="text-2xl font-bold text-foreground">Full Stack Engineer | DevOps Engineer | Next.js | MERN Stack</h1>
-                <span className="text-2xl font-bold text-foreground">$15.00/hr</span>
-              </div>
+                <div className="flex items-center justify-between mb-6">
+                  <h1 className="text-2xl font-bold text-foreground">Full Stack Engineer | DevOps Engineer</h1>
+                </div>
               
               
               <div className="overflow-hidden">
@@ -106,11 +105,12 @@ const MainContent = ({ activeSection }: MainContentProps) => {
                   }`}>
                     {!showFullDescription ? (
                       <div>
-                         <p className="text-foreground text-base leading-relaxed">
-                           Hello! I'm Hasnain, a Full Stack Developer & DevOps Engineer with 6+ years of experience building modern web applications and managing cloud infrastructure. I specialize in delivering complete solutions from clean and responsive front-ends to...
-                         </p>
+                                 <p className="text-foreground text-base leading-relaxed">
+                                   Hello! I'm Hasnain, a Full Stack Developer & DevOps Engineer with 6+ years of experience building modern web applications and managing cloud infrastructure. I specialize in delivering complete solutions from clean and responsive front-ends to powerful back-ends and automated deployments...
+                                 </p>
                         <button 
-                          className="text-accent underline cursor-pointer transition-colors duration-200 hover:text-accent/80"
+                          className="underline cursor-pointer transition-colors duration-200 hover:text-accent/80"
+                          style={{color: '#177803', textDecorationColor: '#177803'}}
                           onClick={() => setShowFullDescription(true)}
                         >
                           more
@@ -159,6 +159,7 @@ const MainContent = ({ activeSection }: MainContentProps) => {
                         
                         <button 
                           className="text-accent underline cursor-pointer transition-colors duration-200 hover:text-accent/80"
+                          style={{textDecorationColor: '#177803'}}
                           onClick={() => setShowFullDescription(false)}
                         >
                           less
@@ -381,44 +382,6 @@ const MainContent = ({ activeSection }: MainContentProps) => {
               </div>
             </div>
 
-            <div className="p-8 space-y-6">
-              <div className="bg-secondary rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-foreground mb-3">Portfolio Overview</h3>
-                <p className="text-text-muted mb-4">
-                  A comprehensive collection of projects spanning front-end development, DevOps engineering, and full-stack solutions.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="bg-background rounded-lg p-4">
-                    <h4 className="font-medium text-foreground mb-2">Front-End Projects</h4>
-                    <p className="text-sm text-text-muted">React, Next.js, and modern web applications</p>
-                  </div>
-                  <div className="bg-background rounded-lg p-4">
-                    <h4 className="font-medium text-foreground mb-2">DevOps Solutions</h4>
-                    <p className="text-sm text-text-muted">Cloud infrastructure and CI/CD pipelines</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-secondary rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-foreground mb-3">Recent Projects</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between p-3 bg-background rounded-lg">
-                    <div>
-                      <h4 className="font-medium text-foreground">E-commerce Platform</h4>
-                      <p className="text-sm text-text-muted">Full-stack React application with payment integration</p>
-                    </div>
-                    <span className="text-accent text-sm">2024</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-background rounded-lg">
-                    <div>
-                      <h4 className="font-medium text-foreground">Cloud Migration</h4>
-                      <p className="text-sm text-text-muted">AWS infrastructure setup and deployment automation</p>
-                    </div>
-                    <span className="text-accent text-sm">2024</span>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         );
     }
