@@ -90,11 +90,6 @@ const MainContent = ({ activeSection }: MainContentProps) => {
                 <span className="text-2xl font-bold text-foreground">$15.00/hr</span>
               </div>
               
-              <div className="mb-6">
-                <div className="text-foreground text-base">Experienced Fullstack and DevOps Engineer Ready to Build and Deploy</div>
-                <div className="text-foreground text-base">Available 40+ Hrs./Week</div>
-                <div className="text-foreground text-base">Committed to Deadlines & Milestones</div>
-              </div>
               
               <div className="overflow-hidden">
                 <div 
@@ -349,7 +344,43 @@ const MainContent = ({ activeSection }: MainContentProps) => {
                 </div>
               )}
             </div>
-            
+
+            {/* Border after work history section */}
+            <div className="w-full h-px bg-border"></div>
+
+            {/* Skills Section */}
+            <div className="p-8">
+              <h2 className="text-2xl font-bold text-foreground mb-6">Skills</h2>
+              <div className="flex flex-wrap gap-3">
+                {/* Full Stack Skills */}
+                <span className="bg-secondary text-foreground px-4 py-2 rounded-full text-sm">Ecommerce Website</span>
+                <span className="bg-secondary text-foreground px-4 py-2 rounded-full text-sm">Web Application</span>
+                <span className="bg-secondary text-foreground px-4 py-2 rounded-full text-sm">Web Development</span>
+                <span className="bg-secondary text-foreground px-4 py-2 rounded-full text-sm">Node.js</span>
+                <span className="bg-secondary text-foreground px-4 py-2 rounded-full text-sm">React</span>
+                <span className="bg-secondary text-foreground px-4 py-2 rounded-full text-sm">Next.js</span>
+                <span className="bg-secondary text-foreground px-4 py-2 rounded-full text-sm">WordPress</span>
+                
+                {/* DevOps Skills */}
+                <span className="bg-secondary text-foreground px-4 py-2 rounded-full text-sm">DevOps</span>
+                <span className="bg-secondary text-foreground px-4 py-2 rounded-full text-sm">Terraform</span>
+                <span className="bg-secondary text-foreground px-4 py-2 rounded-full text-sm">Jenkins</span>
+                <span className="bg-secondary text-foreground px-4 py-2 rounded-full text-sm">Docker</span>
+                <span className="bg-secondary text-foreground px-4 py-2 rounded-full text-sm">Kubernetes</span>
+                <span className="bg-secondary text-foreground px-4 py-2 rounded-full text-sm">Linux</span>
+                <span className="bg-secondary text-foreground px-4 py-2 rounded-full text-sm">AWS Application</span>
+                <span className="bg-secondary text-foreground px-4 py-2 rounded-full text-sm">Azure DevOps</span>
+                
+                {/* Cloud Skills */}
+                <span className="bg-secondary text-foreground px-4 py-2 rounded-full text-sm">AWS</span>
+                <span className="bg-secondary text-foreground px-4 py-2 rounded-full text-sm">Google Cloud</span>
+                <span className="bg-secondary text-foreground px-4 py-2 rounded-full text-sm">Azure</span>
+                <span className="bg-secondary text-foreground px-4 py-2 rounded-full text-sm">Vercel</span>
+                <span className="bg-secondary text-foreground px-4 py-2 rounded-full text-sm">Cloud Infrastructure</span>
+                <span className="bg-secondary text-foreground px-4 py-2 rounded-full text-sm">Cloud Deployment</span>
+              </div>
+            </div>
+
             <div className="p-8 space-y-6">
               <div className="bg-secondary rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-foreground mb-3">Portfolio Overview</h3>
