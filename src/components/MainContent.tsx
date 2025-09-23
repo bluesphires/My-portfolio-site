@@ -8,6 +8,7 @@ interface MainContentProps {
 
 const MainContent = ({ activeSection }: MainContentProps) => {
   const [showFullDescription, setShowFullDescription] = useState(false);
+  const [activeTab, setActiveTab] = useState('completed');
   const renderContent = () => {
     switch (activeSection) {
       case 'frontend':
@@ -176,6 +177,178 @@ const MainContent = ({ activeSection }: MainContentProps) => {
             
             {/* Border after profile section */}
             <div className="w-full h-px bg-border"></div>
+            
+            {/* Work History Section */}
+            <div className="p-8">
+              <div className="mb-6">
+                <h2 className="text-2xl font-bold text-foreground">Work history</h2>
+              </div>
+              
+              {/* Tabs */}
+              <div className="mb-6">
+                <div className="flex space-x-8">
+                  <button 
+                    className={`relative cursor-pointer transition-colors ${
+                      activeTab === 'completed' 
+                        ? 'text-foreground font-bold' 
+                        : 'text-text-muted font-medium hover:text-foreground'
+                    }`}
+                    onClick={() => setActiveTab('completed')}
+                  >
+                    <span>Completed jobs (4)</span>
+                    {activeTab === 'completed' && (
+                      <div className="absolute -bottom-2 left-0 right-0 h-0.5 bg-white"></div>
+                    )}
+                  </button>
+                  <button 
+                    className={`relative cursor-pointer transition-colors ${
+                      activeTab === 'inprogress' 
+                        ? 'text-foreground font-bold' 
+                        : 'text-text-muted font-medium hover:text-foreground'
+                    }`}
+                    onClick={() => setActiveTab('inprogress')}
+                  >
+                    <span>In progress (1)</span>
+                    {activeTab === 'inprogress' && (
+                      <div className="absolute -bottom-2 left-0 right-0 h-0.5 bg-white"></div>
+                    )}
+                  </button>
+                </div>
+                <div className="mt-2 h-px bg-border"></div>
+              </div>
+              
+              {/* Job Entries */}
+              {activeTab === 'completed' && (
+                <>
+                  {/* Job Entry 1 */}
+                  <div className="rounded-lg pl-0 pr-0 pt-0 pb-6">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex-1">
+                    <h3 className="text-accent text-lg font-bold mb-2">NextJS Developer Needed</h3>
+                    <div className="flex items-center space-x-4 mb-2">
+                      <div className="flex items-center space-x-1">
+                        <div className="flex">
+                          {[...Array(5)].map((_, i) => (
+                            <svg key={i} className="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                          ))}
+                        </div>
+                        <span className="text-text-muted text-sm">5.0</span>
+                      </div>
+                      <span className="text-text-muted text-sm">Jul 4, 2025 - Aug 19, 2025</span>
+                    </div>
+                    
+                    <div className="mb-4">
+                      <p className="text-foreground text-sm leading-relaxed">
+                        "I found him to be highly efficient, courteous, and above all, extremely patient with me at all times. He is an awesome, talented, and experienced frontend developer. He delivered work on time and of amazing quality."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Job Entry 2 */}
+              <div className="rounded-lg pl-0 pr-0 pt-0 pb-6">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex-1">
+                    <h3 className="text-accent text-lg font-bold mb-2">React Frontend Developer</h3>
+                    <div className="flex items-center space-x-4 mb-2">
+                      <div className="flex items-center space-x-1">
+                        <div className="flex">
+                          {[...Array(5)].map((_, i) => (
+                            <svg key={i} className="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                          ))}
+                        </div>
+                        <span className="text-text-muted text-sm">5.0</span>
+                      </div>
+                      <span className="text-text-muted text-sm">May 15, 2025 - Jun 30, 2025</span>
+                    </div>
+                    
+                    <div className="mb-4">
+                      <p className="text-foreground text-sm leading-relaxed">
+                        "Excellent developer with great attention to detail. He delivered exactly what was requested and went above and beyond to ensure the project was perfect. Highly recommend for any React development work."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Job Entry 3 */}
+              <div className="rounded-lg pl-0 pr-0 pt-0 pb-6">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex-1">
+                    <h3 className="text-accent text-lg font-bold mb-2">Full Stack Web Application</h3>
+                    <div className="flex items-center space-x-4 mb-2">
+                      <div className="flex items-center space-x-1">
+                        <div className="flex">
+                          {[...Array(5)].map((_, i) => (
+                            <svg key={i} className="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                          ))}
+                        </div>
+                        <span className="text-text-muted text-sm">5.0</span>
+                      </div>
+                      <span className="text-text-muted text-sm">Mar 10, 2025 - Apr 25, 2025</span>
+                    </div>
+                    
+                    <div className="mb-4">
+                      <p className="text-foreground text-sm leading-relaxed">
+                        "Outstanding work! He built a complete web application from scratch with modern technologies. The code quality is excellent and the application runs smoothly. Will definitely hire again."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Job Entry 4 */}
+              <div className="rounded-lg pl-0 pr-0 pt-0 pb-6">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex-1">
+                    <h3 className="text-accent text-lg font-bold mb-2">DevOps & Deployment Setup</h3>
+                    <div className="flex items-center space-x-4 mb-2">
+                      <div className="flex items-center space-x-1">
+                        <div className="flex">
+                          {[...Array(5)].map((_, i) => (
+                            <svg key={i} className="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                          ))}
+                        </div>
+                        <span className="text-text-muted text-sm">5.0</span>
+                      </div>
+                      <span className="text-text-muted text-sm">Jan 20, 2025 - Feb 28, 2025</span>
+                    </div>
+                    
+                    <div className="mb-4">
+                      <p className="text-foreground text-sm leading-relaxed">
+                        "Professional and knowledgeable DevOps engineer. He set up our entire deployment pipeline and cloud infrastructure perfectly. The system is now running smoothly and efficiently."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                </>
+              )}
+
+              {/* In Progress Jobs */}
+              {activeTab === 'inprogress' && (
+                <div className="rounded-lg pl-0 pr-0 pt-0 pb-6">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex-1">
+                      <h3 className="text-accent text-lg font-bold mb-2">DevOps Engineer for CI/CD Pipelines</h3>
+                      <div className="flex items-center space-x-4 mb-2">
+                        <span className="text-text-muted text-sm">Sep 1, 2025 - Ongoing</span>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
             
             <div className="p-8 space-y-6">
               <div className="bg-secondary rounded-lg p-6">
