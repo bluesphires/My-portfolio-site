@@ -2,7 +2,12 @@
 
 import React, { useState, useEffect } from 'react';
 
-const Sidebar = () => {
+interface SidebarProps {
+  activeSection: string;
+  onSectionChange: (section: string) => void;
+}
+
+const Sidebar = ({ activeSection, onSectionChange }: SidebarProps) => {
   const [githubData, setGithubData] = useState({
     username: 'codesphire',
     followers: 3,
@@ -90,13 +95,50 @@ const Sidebar = () => {
           <div className="text-foreground py-2">
             <span className="text-base font-medium">View profile</span>
           </div>
-          <div className="text-text-muted py-2 pl-6 text-base cursor-pointer hover:bg-secondary rounded transition-colors">Front-End Development</div>
-          <div className="text-text-muted py-2 pl-6 text-base cursor-pointer hover:bg-secondary rounded transition-colors">DevOps Engineering</div>
-          <div className="flex items-center justify-between w-full bg-secondary text-foreground py-2 rounded hover:bg-secondary/80 transition-colors cursor-pointer">
+          <div 
+            className={`flex items-center justify-between py-2 pl-6 text-base cursor-pointer rounded transition-colors ${
+              activeSection === 'frontend' 
+                ? 'bg-secondary text-foreground' 
+                : 'text-text-muted hover:bg-secondary'
+            }`}
+            onClick={() => onSectionChange('frontend')}
+          >
+            <span>Front-End Development</span>
+            {activeSection === 'frontend' && (
+              <svg className="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            )}
+          </div>
+          <div 
+            className={`flex items-center justify-between py-2 pl-6 text-base cursor-pointer rounded transition-colors ${
+              activeSection === 'devops' 
+                ? 'bg-secondary text-foreground' 
+                : 'text-text-muted hover:bg-secondary'
+            }`}
+            onClick={() => onSectionChange('devops')}
+          >
+            <span>DevOps Engineering</span>
+            {activeSection === 'devops' && (
+              <svg className="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            )}
+          </div>
+          <div 
+            className={`flex items-center justify-between w-full py-2 rounded transition-colors cursor-pointer ${
+              activeSection === 'allwork' 
+                ? 'bg-secondary text-foreground' 
+                : 'text-text-muted hover:bg-secondary'
+            }`}
+            onClick={() => onSectionChange('allwork')}
+          >
             <span className="text-base pl-6">All work</span>
-            <svg className="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+            {activeSection === 'allwork' && (
+              <svg className="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            )}
           </div>
         </div>
       </div>

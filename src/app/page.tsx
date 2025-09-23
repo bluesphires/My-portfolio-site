@@ -7,6 +7,7 @@ import MainContent from '@/components/MainContent';
 
 export default function Home() {
   const [currentTime, setCurrentTime] = useState('Loading time...');
+  const [activeSection, setActiveSection] = useState('allwork');
 
   useEffect(() => {
     // Get current time
@@ -89,8 +90,8 @@ export default function Home() {
         <div className="w-full h-px bg-border"></div>
         
         <div className="flex">
-          <Sidebar />
-          <MainContent />
+          <Sidebar activeSection={activeSection} onSectionChange={setActiveSection} />
+          <MainContent activeSection={activeSection} />
         </div>
       </div>
     </div>
