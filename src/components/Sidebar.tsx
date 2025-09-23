@@ -107,12 +107,12 @@ const Sidebar = () => {
       {/* Jobs and Hours Summary */}
       <div className="p-6">
         <div className="grid grid-cols-2 gap-8">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-foreground">21</div>
+              <div className="text-xs text-text-muted">Total jobs</div>
+            </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-foreground">11</div>
-            <div className="text-xs text-text-muted">Total jobs</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-foreground">455</div>
+            <div className="text-2xl font-bold text-foreground">2155</div>
             <div className="text-xs text-text-muted">Total hours</div>
           </div>
         </div>
@@ -247,60 +247,6 @@ const Sidebar = () => {
             {/* Border after Linked accounts section */}
             <div className="w-full h-px bg-border"></div>
 
-      {/* Connects */}
-      <div className="p-6">
-        <div className="text-sm text-text-muted mb-2">Connects: 2</div>
-        <div className="flex space-x-2 text-sm">
-          <button className="text-accent hover:underline">View details</button>
-          <button className="text-accent hover:underline">Buy Connects</button>
-        </div>
-      </div>
-
-      {/* Profile Details */}
-      <div className="space-y-2 px-6 pt-6 pb-2">
-        <div className="flex items-center justify-between">
-          <span className="text-sm text-text-muted">Video introduction</span>
-          <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
-          </svg>
-        </div>
-        
-        <div className="flex items-center justify-between">
-          <span className="text-sm text-text-muted">Hours per week</span>
-          <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
-          </svg>
-        </div>
-        
-        <div className="flex items-center justify-between">
-          <span className="text-sm text-text-muted">Languages</span>
-          <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
-          </svg>
-        </div>
-        
-        <div className="flex items-center justify-between">
-          <span className="text-sm text-text-muted">Verifications</span>
-          <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
-          </svg>
-        </div>
-      </div>
-
-      {/* Skills */}
-      <div className="p-6">
-        <h3 className="text-sm font-medium text-foreground mb-3">Skills</h3>
-        <div className="flex flex-wrap gap-2">
-          {skills.slice(0, 8).map((skill) => (
-            <span
-              key={skill}
-              className="bg-secondary text-foreground px-2 py-1 rounded text-xs border border-accent/30"
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
     </aside>
   );
 };
